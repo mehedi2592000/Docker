@@ -1,0 +1,49 @@
+services:
+  project1:
+    build:
+      context: ./DockerPractice
+      dockerfile: Dockerfile
+    image: project1-image
+    ports:
+      - "5132:5132"
+    container_name: DockerPractice1
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:5132
+
+  project2:
+    build:
+      context: ./DockerPractice
+      dockerfile: Dockerfile
+    image: project2-image
+    ports:
+      - "5133:5132"
+    container_name: DockerPractice2
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:5132
+
+# services:
+#   project1:
+#     build:
+#       context: ./DockerPractice
+#       dockerfile: Dockerfile
+#     image: project1-image
+#     ports:
+#       - "5132:5132"
+#     environment:
+#       - ASPNETCORE_ENVIRONMENT=Production
+#       - ASPNETCORE_URLS=http://+:5132
+
+#   project2:
+#     build:
+#       context: ./DockerPractice
+#       dockerfile: Dockerfile
+#     image: project2-image
+#     ports:
+#       - "5133:5132"
+#     environment:
+#       - ASPNETCORE_ENVIRONMENT=Production
+#       - ASPNETCORE_URLS=http://+:5132
+
+ 

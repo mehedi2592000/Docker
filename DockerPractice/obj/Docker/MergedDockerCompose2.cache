@@ -1,0 +1,37 @@
+name: dockercompose14349156635557431082
+services:
+  project1:
+    build:
+      context: D:\OneDrive - intellier.com\project\Docker_Learn\Docker_ALL\Docker\DockerPractice\DockerPractice
+      dockerfile: Dockerfile
+    container_name: DockerPractice1
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:5132
+    image: project1-image
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5132
+        published: "5132"
+        protocol: tcp
+  project2:
+    build:
+      context: D:\OneDrive - intellier.com\project\Docker_Learn\Docker_ALL\Docker\DockerPractice\DockerPractice
+      dockerfile: Dockerfile
+    container_name: DockerPractice2
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:5132
+    image: project2-image
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5132
+        published: "5133"
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose14349156635557431082_default
