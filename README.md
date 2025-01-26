@@ -12,6 +12,16 @@ docker images
 docker build -t basic-app .
 ```
 
+### Build Docker Image with class Libary
+# add example 
+D:\OneDrive - intellier.com\project\JustPractice\WebApplication1\WebApplication1\Dockerfile
+D:\OneDrive - intellier.com\project\JustPractice\WebApplication1\WebApplication2\Dockerfile
+D:\OneDrive - intellier.com\project\JustPractice\WebApplication1\ClassLibrary1   --class libary
+```bash
+D:\OneDrive - intellier.com\project\JustPractice\WebApplication1>
+      docker build -f "D:\OneDrive - intellier.com\project\JustPractice\WebApplication1\WebApplication1\Dockerfile" --tag test "D:\OneDrive - intellier.com\project\JustPractice\WebApplication1"
+```
+
 ### Run Docker Container
 ```bash
 docker run --name basic-app-container-v2 -p 44378:5194 basic-app2
